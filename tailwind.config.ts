@@ -1,3 +1,4 @@
+import { tailwindPlugin } from "./src/theme/index";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -6,13 +7,5 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  },
-  plugins: [],
+  plugins: [tailwindPlugin],
 } satisfies Config;
